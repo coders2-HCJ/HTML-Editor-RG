@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.main-editor {
+    background-image: url("https://ts1.cn.mm.bing.net/th/id/R-C.90a77d95b3043a966f5784a8a43aa0a0?rik=OW9%2feBGwcuQggw&pid=ImgRaw&r=0");
+    display: flex;
+    width: 100%;
+    padding: 5%;
+    position: fixed;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.first {
+    background-color: #ffffff;
+    width: 50%;
+    overflow-x: auto;
+    overflow-y: auto;
+    white-space: pre;
+    box-shadow: 0 1px 1px rgb(22, 22, 22);
+    outline: none;
+    padding: 0.4rem;
+    height: 90vh;
+    font-family: Consolas;
+}
+.second {
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    overflow-x: auto;
+    overflow-y: auto;
+    white-space: pre;
+    right: 0;
+    padding: 0.4rem;
+    height: 90vh;
+    border: none;
+    border-left: 3px solid grey;
+}
+#fsc {
+    padding: none;
+    position: absolute;
+    cursor: pointer;
+}

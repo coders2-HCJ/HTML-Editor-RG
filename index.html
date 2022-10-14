@@ -43,6 +43,9 @@
                 border: none;
                 border-left: 3px solid grey;
             }
+            #fsc {
+                padding: none;
+            }
         </style>
         <title>Html editor</title>
     </head>
@@ -51,9 +54,21 @@
             <div class="first" contenteditable>&lt;!DOCTYPE html><br>&lt;html><br>&lt;head><br>&lt;meta charset="UTF-8" /><br>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /><br>&lt;title>New Webpage&lt;/title><br>&lt;/head><br>&lt;body><br><br>&lt;/body><br>&lt;/html></div>
             <iframe class="second"></iframe>
         </div>
+        <button onclick="fsc();" id="fsc"><img src="https://ts1.cn.mm.bing.net/th/id/R-C.e6628f89d778e49abb65f87c7ed8757c?rik=e%2fwYdKPUu3S4kA&pid=ImgRaw&r=0" width="30px" /></button>
         <script>
             const first = document.querySelector(".first");
             const iframe = document.querySelector("iframe");
+            const elem = document.documentElement;
+            
+            var fsc = function() {
+                if(elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if(elem.webkitRequestFullscreen) {
+                    elem.webkitRequestFullscreen();
+                } else if(elem.msRequestFullscreen) {
+                    elem.msRequestFullscreen();
+                }
+            };
             
             var html = first.textContent;
             iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
@@ -61,7 +76,7 @@
             first.addEventListener('keyup', function() {
                 var html = first.textContent;
                 iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
-            })
+            });
     
             first.addEventListener("paste", function(e) {
                 e.preventDefault();

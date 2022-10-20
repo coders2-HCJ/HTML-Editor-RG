@@ -15,7 +15,6 @@
 }
 .first {
     background-color: white;
-    overflow-wrap: break-word;
     width: 50%;
     overflow-x: auto;
     overflow-y: auto;

@@ -1,3 +1,4 @@
+w3CodeColor();
 const first = document.querySelector(".first");
 const iframe = document.querySelector("iframe");
 const elem = document.documentElement;

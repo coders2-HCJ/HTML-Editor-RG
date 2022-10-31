@@ -1,6 +1,15 @@
-while(true) {
-    w3CodeColor();
+var cycle = function(index) {
+    setTimeout(function() {
+        w3CodeColor();
+        index++;
+        if(index >= 3) {
+            index = 0;
+        }
+        cycle(index);
+        cycle(++index % 3);
+    }, 1000);
 }
+cycle(0);
 const first = document.querySelector(".first");
 const iframe = document.querySelector("iframe");
 const elem = document.documentElement;

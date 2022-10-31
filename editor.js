@@ -1,14 +1,16 @@
-w3CodeColor();
+while(true) {
+    w3CodeColor();
+}
 const first = document.querySelector(".first");
 const iframe = document.querySelector("iframe");
 const elem = document.documentElement;
 
 var fsc = function() {
-    if (elem.requestFullscreen) {
+    if(elem.requestFullscreen) {
         elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) {
+    } else if(elem.webkitRequestFullscreen) {
         elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) {
+    } else if(elem.msRequestFullscreen) {
         elem.msRequestFullscreen();
     }
 };

@@ -1,4 +1,3 @@
-window.setInterval(function() {w3CodeColor();}, 0);
 const first = document.querySelector(".first");
 const iframe = document.querySelector("iframe");
 const elem = document.documentElement;
